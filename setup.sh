@@ -4,7 +4,6 @@
 # Check if the YACHT environment exists
 ENV_NAME="yacht_env"
 check=$(conda env list | cut -d" " -f 1 | grep -w $ENV_NAME | wc -l)
-
 if [ $check -eq 1 ]; then
     echo "The environment '$ENV_NAME' already exists. Please activate it by running 'conda activate $ENV_NAME'."
 else
